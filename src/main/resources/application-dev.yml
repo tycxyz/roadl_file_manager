@@ -1,0 +1,8 @@
+recall: oob
+
+#文件上传路径
+dir: /Users/Daniel/Documents/
+server:
+  port: 8080
+  servlet:
+    context-path: /daniel

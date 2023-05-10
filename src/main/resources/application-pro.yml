@@ -1,0 +1,8 @@
+recall: http://server.com/daniel/bd/callback
+
+#文件上传路径
+dir: /mnt/daniel/www/daniel/files/
+server:
+  port: 8080
+  servlet:
+    context-path: /daniel

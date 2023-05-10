@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  file-manager:
+    image: file-manager:1.0.0
+    container_name: roadl-file-manager
+    environment:
+      - "SPRING_PROFILES_ACTIVE=pro" # 使用的配置文件
+    volumes: # 映射宿主目录
+      - ./files:/mnt/daniel/www/daniel/files/:rw
+    build: # 当前build入口
+      context: ./build
+      dockerfile: ./Dockerfile
+    ports: # 宿主端口到container端口的映射
+      - 9909:8080/tcp
+    restart: always

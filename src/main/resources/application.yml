@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+    # 設定去templates資料夾找html檔案
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+HINT: hint
+
+#静态资源对外暴露的访问路径
+staticAccessPath: /temp/**
+
+minio:
+  url: http://minio.server.com
+  appId: app id
+  appSecret: secret 
+  bucket: daniel
+  # 图片访问路径
+  picPreUrl: https://pic.server.com/
+
+baidu:
+  pan:
+    deviceId: device id
+    clientId: id
+    clientSecret: secret
